@@ -14,3 +14,10 @@ jobs:
 
     - name: Build
       run: make -j2
+
+    - name: 'Upload Artifact'
+      uses: actions/upload-artifact@v3
+      with:
+        name: my-artifact
+        path: DC-Pro-Con.ovl
+        retention-days: 5
